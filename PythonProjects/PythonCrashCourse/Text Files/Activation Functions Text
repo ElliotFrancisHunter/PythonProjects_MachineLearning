@@ -1,0 +1,44 @@
+Common Activation Functions:
+
+- Activation functions are assigned to nodes and take the sum of all inputs, apply a function, and produce an output.
+- We can change the output from a node by using a different activation function.
+- Different activation functions are better for some situations and worse for others.
+- We will briefly examine a few of many: identity, binary step, logistic/sigmoid, tanH, reLU, leakyReLU and softmax
+
+
+Identity: output = input
+- This outputs what it receives as input so considered linear
+- Not great as doesn't take multiple variables into account so results in more simple models
+
+
+Binary step: output = 1 if input >= 0 or output = 0 if input < 0
+- Turns all positive inputs to 1 and all negative inputs to 0
+- Better, but not great as it can cause dead neurons(When output goes to 0)
+
+
+Logistic/sigmoid: output -> 0 As input < 0 or output -> 1 as input > 0
+- Similar to binary step but more of a gentle slop as values approach 0 or 1
+- Again, better but still have the problem of dead or nearly dead neurons
+
+
+TanH: output -> -1 as input < 0 or output -> 1 as input > 0
+- Very similar to logistic/sigmoid except that negative inputs -> -1 rather than 0
+- Good, but still has the dead neuron problem and there are better solutions
+
+
+ReLU: output = 0 if input < 0 or output = input if input >= 0
+- Basically all negative inputs produce output of 0 and positives outputs match input
+- Much better as positive inputs keep their value and propagate through the network
+- Problem is we don't keep negative values as we set output to 0
+- Produces much better and more accurate outputs and is widely used
+
+LeakyReLU: output -> input if input < 0 or output = input if input >= 0
+- Very similar to reLU but with a very mild negative output if input is negative
+- This is better as it avoids more dead neurons
+- Produces the best results and the best models seem to use a combination of reLU and Leaky reLU
+
+
+Softmax: output = set of probabilities based on number of output connections - Often used as the final layer
+- We usually use this as final output layer
+- Excellent way to end as it allows us to view all
+    of the possible answers and pick the one with the highest probability.

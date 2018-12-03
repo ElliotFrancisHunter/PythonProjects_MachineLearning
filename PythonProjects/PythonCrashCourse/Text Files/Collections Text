@@ -1,0 +1,43 @@
+# Collections
+# Tuples
+# Lists and list operations
+
+# Tuple - name = (val1, val2, ...) not limited by types, can also place custom objects
+# Zero-based index
+first_three_names = ("Thor", "Hulk", "Black Widow")
+first_three_names = ("Hawkeye", "Captain America", "Iron Man")
+
+print(first_three_names)
+print(first_three_names[0])
+print(first_three_names[2])
+print(len(first_three_names))
+
+first_three_names.count(first_three_names)
+
+# first_three_names[0] = "" not allowed: tuples don't support item assignment
+
+# Lists have a lot more functionality
+
+list_of_names = ["Thor", "Hulk", "Black Widow", "Hawkeye", "Captain America", "Iron Man"]
+print(list_of_names)
+list_of_names[0] = "Nick Fury"  # Assign to first element in list
+print(list_of_names)
+list_of_names.remove("Iron Man")  # if exists, remove
+print(list_of_names)
+print(list_of_names.pop(3))  # Print fourth element and then remove it from list
+print(list_of_names)
+list_of_names.append("Iron Man")  # Add to end of list
+print(list_of_names)
+list_of_names.append("Hawkeye")  # Add to end of list
+print(list_of_names)
+print(list_of_names[:4])  # print up until fifth element
+print(list_of_names[3:])  # print FROM third element
+
+# Dictionaries and operations-Store values based on a key
+# keys can be mixed types "key": "value"
+name_dict = {"Hulk": "Bruce Banner", "Captain America": "Steve Rogers", "Iron Man": "Tony Stark"}
+print(name_dict)
+print(name_dict["Hulk"])
+# dictionary functions are basically the same as list functions
+
+print(name_dict.values())

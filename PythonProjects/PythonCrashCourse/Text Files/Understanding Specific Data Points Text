@@ -1,0 +1,23 @@
+from keras.datasets import cifar10
+import matplotlib.pyplot as plt
+import keras.utils as utils
+import numpy as np
+
+(train_images, train_labels), (test_images, test_labels) = cifar10.load_data()
+
+# Explore and download the CIFAR 10 dataset
+
+first_image = train_images[0]
+
+print(first_image[0])  # Each element in the array represents a RGB value for each Pixel.
+plt.imshow(first_image)
+plt.show()
+# represents the labels of the array
+labels_array = ['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']
+
+train_labels = utils.to_categorical(train_labels)  # categorises the data layout
+max_index = np.argmax(train_labels[0])  # finds max element in a given array and grabs index
+print(labels_array[max_index])  # prints label of parameter passed in as max-index
+print(train_labels[0])
+
+# 'one hot' encoding [0,0,0,0,1,0] works really well with softmax function

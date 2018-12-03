@@ -1,0 +1,44 @@
+# Functions
+# Functions without parameters or return values
+
+
+# def name(): for function definition
+#   function body
+# name() calls function
+rage_factor = 0.5
+is_in_hulk_form = False
+
+
+def increase_rage():
+    global rage_factor
+    global is_in_hulk_form
+    rage_factor += 0.1
+    if rage_factor > 0.9:
+        is_in_hulk_form = True
+    print("Hulk is getting angrier")
+
+
+# increase_rage()
+# increase_rage()
+# increase_rage()
+# increase_rage()
+# increase_rage()
+# print(rage_factor)
+# print(is_in_hulk_form)
+
+# functions with parameters and return values
+
+def increase_rage_with_parameters(by_amount):
+    global rage_factor
+
+    rage_factor += by_amount
+    print("Hulk is getting angrier")
+    if rage_factor > 0.9:
+        return True, 1,
+    else:
+        return False
+
+
+is_in_hulk_form = increase_rage_with_parameters(0.5) # add underscores for multiple return values
+print(is_in_hulk_form)
+

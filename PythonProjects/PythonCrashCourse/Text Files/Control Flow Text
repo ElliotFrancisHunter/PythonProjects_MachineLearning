@@ -1,0 +1,35 @@
+# Control flow
+# If statements
+
+# if condition == true: execute code block
+
+rage_factor = 1.0
+feeling = None  # essentially just tells compiler variable is empty
+is_under_attack = True
+
+if rage_factor > 0.5 and is_under_attack:
+    feeling = "like it's time to SMASH"
+elif rage_factor > 0.5 and not is_under_attack:  # a python else
+    feeling = "angry"
+elif rage_factor == 0.5:
+    feeling = "A little bit angry"
+else:   # basically a default
+    feeling = "calm"
+
+print('Bruce is feeling', feeling)
+
+# While and for-in loops
+# while condition:
+
+while rage_factor > 0.1:
+    print("Hulk is on a rampage")
+    rage_factor -= 0.1
+    # break  # allows you to exit the while loop
+
+print("Hulk has turned back into Bruce Banner")
+
+list_of_names= ["Thor", "Hawkeye", "Black Widow"]
+for name in list_of_names:
+    print(name)
+# Guarantees never going out of bounds
+

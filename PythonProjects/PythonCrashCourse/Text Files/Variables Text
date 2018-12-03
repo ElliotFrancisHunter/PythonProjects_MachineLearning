@@ -1,0 +1,44 @@
+# Variable operators and operations
+# Type conversion
+
+
+
+age = 49 # int example
+
+rage_factor = 0.5 # float example
+
+is_in_hulk_form = False # bool example
+
+name = "Bruce Banner" # string example
+
+print(age, rage_factor, is_in_hulk_form, name)
+print(type(age))
+
+# assignment: = not
+# arithmetic: + - * / % // += -= *= /=
+# conditional: > >= <= == !=  not
+
+is_not_in_hulk_form = not is_in_hulk_form
+print(is_not_in_hulk_form)
+
+new_age = age + 1
+print(new_age)
+
+full_name = name + " - The Hulk"
+print(full_name)
+
+print(50 % 7)  # Does the division but only keeps remainder
+x = 10 / 2
+print(x)
+print(int(x))
+
+age += 1  # increments and then stores variables
+
+print(5 < 2)
+print(5 == 5)
+
+age = str(age)  # converts variable into string
+
+
+
+

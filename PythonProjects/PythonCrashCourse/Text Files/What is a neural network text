@@ -1,0 +1,34 @@
+2). What are neural networks?
+
+- A network of interconnected nodes, each with "weights" and "biases" and data flows through it from input to output.
+- Neural networks are a set of algorithms designed to recognise patterns. Check out Tensorflow's mmist problem
+- The name is derived from their structure modelled around the human brain.
+- Several layers; each containing operations to process inputs, or map pathways through the network to produce outputs.
+- We'll focus mostly on the network layers ("dense" or "connected") and take a look at operations in the next section.
+
+
+- These layers consist of mini networks of many interconnected nodes, each with assigned "weights" and "biases".
+- Weights are assigned an initial value and are altered according to an activation function during training.
+- Biases are just some constant value assigned to each node.
+- The weight of each connection determines which path to take once a node receives an input, repeated until the end.
+- What this means for us is that the image runs through the network until patterns are recognised.
+- We get similar images consistently mapping to the final output node, even if the middle of the pathway is different.
+- For example, if our model tries to recognise whether or not an image contains a face, each image with a face will:
+  after training; take similar (albeit not identical) pathways through the network.
+- Image classification is all about recognising patterns consistent to all images of a category.
+- Our models learn the pathways and adjust neuron weights during training to build said pathways.
+
+
+
+
+Basically decision maths. They each have their own weightings and bias. Example
+
+Face
+a1(0.6) ---------- b1 --------
+    \   /                 \
+     \ /                   \
+        ----- b2 ---------- c1 if ( < 0.5) not fave
+     / \                   /
+    /   \                 /
+a2(0.2) ---------- a2 ---------
+!Face

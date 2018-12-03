@@ -1,0 +1,76 @@
+# Classes and objects
+# Create a custom class
+# Create a couple of instances of the class (objects)
+
+
+class SuperHero:  # Typical class notation
+
+    team = "Avengers"  # default team for all superheroes
+
+    def __init__(self, name, health):  # creates objects within the function
+        self.name = name
+        self.health = health
+
+    def take_damage(self, amount):
+        self.health -= amount
+        print(self.name, "Took", amount, "damage")
+        if self.health <= 0:
+            print(self.name, "Is too weak to fight!")
+
+
+thor = SuperHero("Thor", 100)
+print(thor.name, thor.health)
+thor.take_damage(100)
+print(thor.health)
+print(thor.team)
+
+
+class EdgedWeapon:
+
+    weapon_type = "Blade"
+
+    def __init__(self, name, hands_to_hold, uses):
+        self.name = name
+        self.hands_to_hold = hands_to_hold
+        self.uses = uses
+
+    def weapon_damaged(self, amount):
+        self.uses -= amount
+        print(self.name, "has taken", amount, "damage and has:", self.uses, "uses left!")
+        if self.uses <= 0:
+            print(self.name, "is broken!")
+
+
+wooden_sword = EdgedWeapon("Stick", 1, 3)
+print(wooden_sword)
+wooden_sword.weapon_damaged(0.5)
+wooden_sword.weapon_damaged(1)
+wooden_sword.weapon_damaged(9)
+
+# Subclasses(Child) and Superclasses(Parent) inheritance basically
+
+
+class Hulk(SuperHero):
+
+    rage = 50
+    team = "Revengers"
+
+    def __init__(self, name, health):
+        super().__init__(name, health)  # Inherits from superclass
+
+    def take_damage(self, amount):
+        self.rage += amount
+        super().take_damage(amount)
+
+
+hulk = Hulk("Hulk", 100)
+print(hulk.rage)
+hulk.take_damage(30)
+print(hulk.rage)
+print(hulk.health)
+print(hulk.team)
+thor.team = "Revengers"
+print(SuperHero.team)
+print(thor.team)
+
+
