@@ -19,10 +19,10 @@ results = model.evaluate(x=x_test, y=y_test)
 print('Test loss:', results[0])
 print('Test accuracy:', results[1])
 
-test_image_data = np.asarray([x_test[12]])  # 3 works, 5 ish, 10 works, 12
+test_image_data = np.asarray([x_test[3]])
 
 prediction = model.predict(x=test_image_data)
 max_index = np.argmax(prediction[0])
 print('Prediction:', labels_array[max_index])
-plt.imshow(x_test[12])
+plt.imshow(x_test[3])
 plt.show()
